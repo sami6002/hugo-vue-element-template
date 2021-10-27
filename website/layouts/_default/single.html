@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="bg-white">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-32">
+        <article class="entry py-8">
+            <h1>{{.Page.Title }}</h1>
+            <div class="entry-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</div>
+<!-- // content -->
+<!-- {{ block "join-today" . }}{{ partial "join-today" . }}{{end}}  -->
+{{end}}

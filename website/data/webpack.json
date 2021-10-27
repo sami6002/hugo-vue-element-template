@@ -1,0 +1,24 @@
+{
+  "external": {
+    "js": "/assets/js/external.bb3f27e5c4247d32d21b.js"
+  },
+  "main": {
+    "css": "/assets/css/main.4a539f2a2e0579638a30.css",
+    "js": "/assets/js/main.bb3f27e5c4247d32d21b.js"
+  },
+  "": {
+    "ttf": [
+      "/assets/fonts/2cce8c806c2d2e03adc2b239ae316b76.ttf",
+      "/assets/fonts/7130fdb0a3f94088119aa0f96db9b08b.ttf",
+      "/assets/fonts/732389ded34cb9c52dd88271f1345af9.ttf",
+      "/assets/fonts/788f9cc4e37cde7847cd42d30bee07b7.ttf",
+      "/assets/fonts/ede02f48d8db5bdf524324f2ba4b9cd9.ttf"
+    ],
+    "woff": "/assets/fonts/535877f50039c0cb49a6196a5b7517cd.woff",
+    "js": [
+      "/assets/js/0.bb3f27e5c4247d32d21b.js",
+      "/assets/js/1.bb3f27e5c4247d32d21b.js"
+    ],
+    "json": "/413c3bbd908449fc7066.hot-update.json"
+  }
+}

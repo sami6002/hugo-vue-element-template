@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language.Lang }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title>{{.Params.meta_title}}</title>
+        <meta name="description" content="{{.Params.meta_description}}" />
+        {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }}
+        <link href="{{ relURL . }}" type="text/css" rel="stylesheet" />
+        {{ end }}
+    </head>
+
+    <body class="{{if eq .Params.home true }}is-home{{else}}is-inner{{end}}{{if eq .Params.fh true }} floating-header{{end}}{{if eq .Params.user true }} logged-in{{end}}">
+        {{if not (eq .Params.noheader true) }}
+        <!-- header -->
+        {{ block "header" . }}
+        <!--  -->
+        {{if not (eq .Params.user true) }}
+            {{ partial "header" . }}
+        {{else}}
+            {{ partial "header-user" . }}
+        {{end}}
+        <!--  -->
+        {{end}}
+        <!-- // header -->
+        {{end}}
+        <!--  -->
+        <div id="main">
+            {{ block "main" . }}{{end}}
+        </div>
+
+        {{if not (eq .Params.noheader true) }}
+        <!--  -->
+        {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+        <!--  -->
+        {{end}}
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+        {{ $script := .Site.Data.webpack.main }} {{ with $script.js }}
+        <script src="{{ relURL . }}"></script>
+        {{ end }}
+    </body>
+</html>

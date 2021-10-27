@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+.main-family {
+    font-family: 'BarlowRegular', sans-serif, Helvetica, Arial;
+}
+
+body {
+    line-height: 1.4;
+    color: $--color-text-primary;
+    font-size: $--font-size-base;
+    @extend .main-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// common
+input, button, select, textarea {
+    @extend .main-family;
+    -webkit-appearance: none;
+}
+
+a, label {
+    color: $--color-text-primary;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: $--color-primary;
+    }
+    &.router-link-active {
+        color: $--color-primary;
+    }
+}
